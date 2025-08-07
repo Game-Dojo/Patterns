@@ -23,6 +23,8 @@ namespace Singleton
         {
             _gameScore += score;
         }
+
+        public int GetScore => _gameScore;
     }
 }
 
