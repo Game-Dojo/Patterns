@@ -21,6 +21,11 @@ namespace Singleton
 
         public void AddScore(int score)
         {
+            SumToScore(score);
+        }
+
+        private void SumToScore(int score)
+        {
             _gameScore += score;
         }
 

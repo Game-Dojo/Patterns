@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace SimpleStateMachine
@@ -9,14 +10,15 @@ namespace SimpleStateMachine
     public class PlayerStateMachine: MonoBehaviour
     {
         public enum States {Idle, Walk, Attack}
-        [SerializeField] private States _currentState = States.Idle;
+        [SerializeField] private States currentState = States.Idle;
 
         private bool _idleOnce = false;
         private bool _isWalking = false;
         private bool _isEnemyInside = false;
+        
         void Update()
         {
-            switch(_currentState) 
+            switch(currentState) 
             {
                 case States.Idle:
                     if (_idleOnce) return;
@@ -80,7 +82,7 @@ namespace SimpleStateMachine
 
         public void SetState(States state)
         {
-            _currentState = state;
+            currentState = state;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
