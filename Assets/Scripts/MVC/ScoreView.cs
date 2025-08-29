@@ -1,15 +1,15 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MVC
 {
     public class ScoreView : MonoBehaviour
     {
-        [SerializeField] private Text scoreText;
+        [SerializeField] private TMP_Text scoreText;
 
         public void UpdateView(int newScore)
         {
-            scoreText.text = "Score: " + newScore;
+            scoreText.text = newScore.ToString();
         }
     }
 }

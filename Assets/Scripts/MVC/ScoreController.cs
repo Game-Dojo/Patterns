@@ -21,7 +21,7 @@ namespace MVC
 
         void OnScoreButtonClicked()
         {
-            _model.AddScore(2);
+            _model.AddScore(1);
         }
     }
 }

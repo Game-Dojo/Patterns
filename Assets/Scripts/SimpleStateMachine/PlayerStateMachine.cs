@@ -77,7 +77,7 @@ namespace SimpleStateMachine
 
         void AttackState()
         {
-            
+
         }
 
         public void SetState(States state)
